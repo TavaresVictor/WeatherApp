@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private WeatherListAdapter adapter;
     private final List<Weather> weathers = new ArrayList<>();
     private FloatingActionButton fetchButton;
-
+//Aqui o botão -------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
