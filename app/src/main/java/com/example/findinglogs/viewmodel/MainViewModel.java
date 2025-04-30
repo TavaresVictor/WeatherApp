@@ -16,7 +16,9 @@ import com.example.findinglogs.model.util.Logger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class MainViewModel extends AndroidViewModel {
 
@@ -44,10 +46,11 @@ public class MainViewModel extends AndroidViewModel {
         handler.postDelayed(fetchRunnable, FETCH_INTERVAL);
     }
 
-    private void fetchAllForecasts() {
+    public void fetchAllForecasts() {
         if (Logger.ISLOGABLE) Logger.d(TAG, "fetchAllForecasts()");
         HashMap<String, String> localizations = mRepository.getLocalizations();
         List<Weather> updatedList = new ArrayList<>();
+
 
         for (String latlon : localizations.values()) {
             mRepository.retrieveForecast(latlon, new WeatherCallback() {

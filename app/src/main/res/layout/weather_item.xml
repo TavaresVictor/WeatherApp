@@ -32,11 +32,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16sp"
-            android:textSize="20sp"
-            android:textStyle="bold"
             android:ellipsize="end"
             android:maxLines="1"
             android:textColor="@color/material_dynamic_tertiary20"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/img_view_item"
             app:layout_constraintTop_toTopOf="parent"
@@ -52,6 +52,7 @@
             app:layout_constraintEnd_toEndOf="@id/tv_weather_name"
             app:layout_constraintStart_toStartOf="@id/tv_weather_name"
             app:layout_constraintTop_toBottomOf="@id/tv_weather_name" />
+
         <TextView
             android:id="@+id/temp_max"
             android:layout_width="0dp"

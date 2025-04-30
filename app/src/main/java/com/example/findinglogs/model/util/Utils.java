@@ -31,16 +31,30 @@ public class Utils {
         Drawable drawable;
         String nameDrawable = "weather_icon_" + name;
         Log.d("draw", nameDrawable);
+
+
+        /*----------Algoritmo original ----------------
         try {
             int idDrawable = resources.getIdentifier(nameDrawable, Constants.KEY_COD_DRAWABLE,
                     context.getPackageName());
             drawable = ResourcesCompat.getDrawable(resources, idDrawable, null);
         } catch (Exception e) {
+        ----------------------------------------------*/
+
+
+        int idDrawable = resources.getIdentifier(nameDrawable, Constants.KEY_COD_DRAWABLE,
+                context.getPackageName());
+
+        //Adicionei uma condicional para verificar se o identificador procede
+        if (idDrawable != 0) {
+            drawable = ResourcesCompat.getDrawable(resources, idDrawable, null);
+        }else{
             if (Logger.ISLOGABLE)
                 Logger.w(TAG, "can't retrieve drawable resource: getting default");
-            drawable = ResourcesCompat
-                    .getDrawable(resources, R.drawable.ic_launcher_foreground, null);
+            drawable = ResourcesCompat.getDrawable(resources, R.drawable.ic_launcher_foreground,
+                    null); //Caso o identificador não seja reconhecido retorna o item padrão (mesmo código do original)
         }
+
         return drawable;
     }
 

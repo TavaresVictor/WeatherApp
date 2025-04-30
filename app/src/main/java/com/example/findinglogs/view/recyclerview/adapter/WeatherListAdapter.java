@@ -57,7 +57,7 @@ public class WeatherListAdapter extends RecyclerView.Adapter<WeatherListAdapter.
         }
 
         public void holdWeather(Weather weather, Context context) {
-            switch (weather.getWeather().get(0).getIcon()){
+                switch (weather.getWeather().get(0).getIcon()){
                 case "02d":
                     cardView.setCardBackgroundColor(context.getColor(R.color.weather_few_clouds));
                     break;
@@ -96,7 +96,7 @@ public class WeatherListAdapter extends RecyclerView.Adapter<WeatherListAdapter.
             String temp_min_value = "Temp. mín: " +
                     Utils.getCelsiusTemperatureFromKevin(weather.getMain().getTemp_min());
             temp_min.setText(temp_min_value);
-            String pressure_value = "Pressão: " + 1008.2 + "hPa";
+            String pressure_value = "Pressão: " + weather.getMain().getPressure()+ "hPa";
             pressure.setText(pressure_value);
             String humidity_value = "Umidade: " + weather.getMain().getHumidity() + "%";
             humidity.setText(humidity_value);
