@@ -33,6 +33,8 @@ The app is functional, but there are still some improvements and bug fixes to be
 Your challenge is to help us fix those bugs and complete the tasks listed above.
 Bring your problem-solving skills, creativity, and caffeine if needed — and let’s make this app shine!
 
+DESAFIO CONCLUIDO 😊👌
+
 Ready?
 **Go go go...**
 🚀🚀🚀🚀🚀🚀🚀🚀🚀
